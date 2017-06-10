@@ -1,14 +1,10 @@
 
 if( typeof module !== 'undefined' )
 {
-  require( 'wvector' );
-  // require( '../staging/amath/arithmetic/xAnArray.s' );
+  require( 'wscalar' );
+  // require( '../staging/amath/arithmetic/cScalar.s' );
 }
 
 var _ = wTools;
-var a1 = [ 1,2,5,9 ];
-var a2 = [ 1,2,3,4 ];
-
-_.anarray.addVectors( a1,a2 );
-console.log( 'a1',a1 );
-console.log( 'a2',a2 );
+var fract = _.fract( 1.1 );
+console.log( 'fract',fract );
