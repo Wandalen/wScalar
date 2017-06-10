@@ -26,7 +26,6 @@ if( typeof module !== 'undefined' )
 
 var _ = wTools.withArray.Float32;
 var Parent = wTools.Testing;
-_.assert( sqrt );
 
 // --
 // test

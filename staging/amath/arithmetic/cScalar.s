@@ -18,14 +18,20 @@ if( typeof module !== 'undefined' )
 
 }
 
-var EPS = 1e-5;
-var EPS2 = 1e-10; 
-
 var _ = wTools;
 var _random = Math.random;
 var _floor = Math.floor;
 var _ceil = Math.ceil;
 var _round = Math.round;
+
+if( _.EPS === undefined )
+_.EPS = 1e-5;
+
+if( _.EPS2 === undefined )
+_.EPS2 = 1e-10;
+
+var EPS = _.EPS;
+var EPS2 = _.EPS2;
 
 // --
 // basic
