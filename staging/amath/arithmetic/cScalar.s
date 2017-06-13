@@ -82,14 +82,15 @@ function factorial( src )
 
 //
 
-function clamp( src,min,max )
+function clamp( src , min , max )
 {
   _.assert( arguments.length === 2 || arguments.length === 3 );
 
   if( arguments.length === 2 )
   {
-    min = arguments[ 1 ];
-    max = arguments[ 2 ];
+    _.assert( arguments[ 1 ].length === 2 );
+    min = arguments[ 1 ][ 0 ];
+    max = arguments[ 1 ][ 1 ];
   }
 
   if( src > max )
