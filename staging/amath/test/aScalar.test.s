@@ -25,7 +25,7 @@ if( typeof module !== 'undefined' )
 //
 
 var _ = wTools.withArray.Float32;
-var Parent = wTools.Testing;
+var Parent = wTools.Tester;
 
 // --
 // test
@@ -51,7 +51,7 @@ var Self =
 {
 
   name : 'scalar.test',
-  // verbosity : 7,
+  verbosity : 7,
   // debug : 1,
 
   tests :
@@ -67,6 +67,6 @@ var Self =
 
 Self = wTestSuite( Self );
 if( typeof module !== 'undefined' && !module.parent )
-_.Testing.test( Self.name );
+_.Tester.test( Self.name );
 
 } )( );
