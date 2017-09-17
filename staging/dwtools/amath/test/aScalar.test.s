@@ -7,7 +7,7 @@ if( typeof module !== 'undefined' )
 
   try
   {
-    require( '../../abase/wTools.s' );
+    require( '../../Base.s' );
   }
   catch( err )
   {
@@ -34,7 +34,7 @@ var Parent = wTools.Tester;
 function fract( test )
 {
 
-  test.description = 'simple';
+  test.description = 'trivial';
 
   test.equivalent( _.fract( 1.5 ) , 0.5 );
   test.equivalent( _.fract( 2.1 ) , 0.1 );
@@ -51,7 +51,8 @@ var Self =
 {
 
   name : 'scalar.test',
-  verbosity : 7,
+  silencing : 1,
+  // verbosity : 7,
   // debug : 1,
 
   tests :

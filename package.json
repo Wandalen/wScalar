@@ -11,14 +11,14 @@
     }
   ],
   "license": "MIT",
-  "main": "staging/amath/arithmetic/cScalar.s",
+  "main": "staging/dwtools/amath/arithmetic/cScalar.s",
   "files": [
-    "staging/amath",
+    "staging/dwtools/amath",
     "production"
   ],
   "directories": {
     "doc": "doc",
-    "main": "staging/amath/arithmetic/cScalar.s"
+    "main": "staging/dwtools/amath/arithmetic/cScalar.s"
   },
   "scripts": {
     "test": "wtest staging",
@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "wTesting": "",
-    "wscalar": ""
+    "wscalar": "."
   },
   "keywords": [
     "wTools",

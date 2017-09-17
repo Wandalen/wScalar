@@ -7,7 +7,7 @@ if( typeof module !== 'undefined' )
 
   try
   {
-    require( '../../abase/wTools.s' );
+    require( '../../Base.s' );
   }
   catch( err )
   {
@@ -119,7 +119,7 @@ function mod( src1,src2 )
 
 //
 
-var sign = function ( src )
+var sign = function( src )
 {
 
   return ( src < 0 ) ? - 1 : ( src > 0 ) ? 1 : 0;
