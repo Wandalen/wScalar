@@ -4,17 +4,23 @@
 
 if( typeof module !== 'undefined' )
 {
-
+  if( typeof wBase === 'undefined' )
   try
   {
-    require( '../../Base.s' );
+    try
+    {
+      require.resolve( '../../../../dwtools/Base.s' )/*fff*/;
+    }
+    finally
+    {
+      require( '../../../../dwtools/Base.s' )/*fff*/;
+    }
   }
   catch( err )
   {
     require( 'wTools' );
   }
-
-  var _ = wTools;
+var _ = wTools;
 
 }
 
@@ -142,7 +148,7 @@ function sc( src )
 // round
 // --
 
-function roundPowerOfTwo( src )
+function roundToPowerOfTwo( src )
 {
 
   _.assert( _.numberIs( src ) );
@@ -152,7 +158,7 @@ function roundPowerOfTwo( src )
   // {
   //   var result = [];
   //   for( var s = 0 ; s < src.length ; s++ )
-  //   result[ s ] = roundPowerOfTwo( src[ s ] );
+  //   result[ s ] = roundToPowerOfTwo( src[ s ] );
   //   return result;
   // }
 
@@ -161,7 +167,7 @@ function roundPowerOfTwo( src )
 
 //
 
-function ceilPowerOfTwo( src )
+function ceilToPowerOfTwo( src )
 {
 
   _.assert( _.numberIs( src ) );
@@ -171,7 +177,7 @@ function ceilPowerOfTwo( src )
   // {
   //   var result = [];
   //   for( var s = 0 ; s < src.length ; s++ )
-  //   result[ s ] = ceilPowerOfTwo( src[ s ] );
+  //   result[ s ] = ceilToPowerOfTwo( src[ s ] );
   //   return result;
   // }
 
@@ -180,7 +186,7 @@ function ceilPowerOfTwo( src )
 
 //
 
-function floorPowerOfTwo( src )
+function floorToPowerOfTwo( src )
 {
 
   _.assert( _.numberIs( src ) );
@@ -190,7 +196,7 @@ function floorPowerOfTwo( src )
   // {
   //   var result = [];
   //   for( var s = 0 ; s < src.length ; s++ )
-  //   result[ s ] = floorPowerOfTwo( src[ s ] );
+  //   result[ s ] = floorToPowerOfTwo( src[ s ] );
   //   return result;
   // }
 
@@ -221,9 +227,9 @@ var Proto =
 
   // round
 
-  roundPowerOfTwo : roundPowerOfTwo,
-  ceilPowerOfTwo : ceilPowerOfTwo,
-  floorPowerOfTwo : floorPowerOfTwo,
+  roundToPowerOfTwo : roundToPowerOfTwo,
+  ceilToPowerOfTwo : ceilToPowerOfTwo,
+  floorToPowerOfTwo : floorToPowerOfTwo,
 
 
   // var
